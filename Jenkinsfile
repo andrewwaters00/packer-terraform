@@ -12,7 +12,7 @@ options {
 
  stages {
   stage('Destroy EC2') {
-      steps
+      steps {
       withCredentials([
             usernamePassword(credentialsId: 'AWS_KEY', passwordVariable: 'AWS_SECRET', usernameVariable: 'AWS_KEY'),
             usernamePassword(credentialsId: 'github_account', passwordVariable: 'REPO_PASS', usernameVariable: 'REPO_USER'),
@@ -28,5 +28,6 @@ options {
      }
     }
   }
+}
 
    
