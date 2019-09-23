@@ -26,7 +26,7 @@ data "aws_ami" "dev_ami" {
 resource "aws_instance" "dev_ec2" {
   ami           = "${data.aws_ami.dev_ami.id}"
   instance_type = "t2.micro"
-  key_name = "dev_ec2"
+  key_name = "dev-ec2"
   
 tags = {
     Name = "dev machine"
